@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الاصول العقارية</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo&family=Open+Sans:wght@400;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="icon" href="images/logo1.png" />
+    <link rel="stylesheet" href="style sheet/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <style>
+    @import url(http://weloveiconfonts.com/api/?family=entypo);
+    @import url(https://fonts.googleapis.com/css?family=Muli);
+
+    body {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      font-family: Muli, sans-serif;
+      color: #444;
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 0;
+      padding: 0 10px 0 0;
+    }
+
+    a {
+      cursor: pointer;
+      display: block;
+      color: #b3b3b3;
+      text-decoration: none;
+    }
+
+    .bckg {
+      background-color: #383b42;
+      box-shadow: -4px 0px 10px rgba(14, 14, 14, 0.48) inset;
+      width: 200px;
+      height: 100%;
+      position: fixed;
+      right: 0;
+      top: 0;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: normal;
+      color: #f6f6ef;
+      line-height: 60px;
+      margin: 0;
+      font-size: 30px;
+      letter-spacing: 2px;
+      background-color: #34363a;
+      border-bottom: 1px solid rgba(101, 116, 134, 0.57);
+    }
+
+    h2 {
+      font-size: 25px;
+      text-transform: uppercase;
+      margin: 0;
+      letter-spacing: 3px;
+      color: #919191;
+      font-weight: normal;
+      padding-right: 40px;
+      line-height: 60px;
+      text-shadow: 1px 1px 2px #fff;
+      position: relative;
+      flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      text-align: right;
+    }
+
+    h1::after {
+      content: "";
+      width: 36px;
+      height: 36px;
+      position: absolute;
+      left: -9%;
+      top: 12px;
+      background-color: #34363a;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    h3 {
+      font-size: 17px;
+      margin: 0;
+      line-height: 40px;
+      color: #555;
+      cursor: pointer;
+      position: relative;
+    }
+
+    header {
+      width: 200px;
+      height: 100%;
+      float: left;
+      position: relative;
+      z-index: 99;
+
+      & nav ul li {
+        border-bottom: 1px solid #42454d;
+        padding-left: 48px;
+        transition: all 0.6s;
+        border-top: 1px solid #2e3036;
+
+        &:hover {
+          background-color: #454952;
+          transition: all 0.6s;
+          border-bottom: 1px solid #797979;
+        }
+
+        &:hover a {
+          color: #fff;
+          transition: all 0.6s;
+        }
+
+        & a {
+          line-height: 55px;
+          font-size: 18px;
+          position: relative;
+          letter-spacing: 1px;
+          transition: all 0.6s;
+
+          &:before {
+            font-family: "entypo", sans-serif;
+            font-size: 20px;
+            position: absolute;
+            left: -32px;
+          }
+        }
+
+        &:first-child a:before {
+          content: "\268f";
+        }
+
+        &:nth-child(2) a:before {
+          content: "\1f465";
+        }
+
+        &:nth-child(3) a:before {
+          content: "\1f4c5";
+        }
+
+        &:nth-child(4) {
+          padding-left: 0;
+        }
+        &:nth-child(4) i {
+          padding-right: 30px;
+        }
+      }
+      & nav ul li:last-child {
+        padding-left: 0;
+      }
+    }
+
+    main {
+      flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+    }
+
+    .title {
+      background-color: #fff;
+      border-bottom: 1px solid #c0c1c0;
+      height: 60px;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding-left: 70px;
+
+      & a {
+        color: #aaa;
+        width: auto;
+        margin: 0 20px;
+        float: right;
+        line-height: 62px;
+        position: relative;
+        text-decoration: none;
+        transition: all 0.5s;
+        font-size: 25px;
+
+        &:before {
+          content: "\1f464";
+          font-size: 38px;
+          position: absolute;
+          left: -50px;
+          font-family: "entypo";
+        }
+      }
+    }
+
+    a:hover {
+      color: #33526b;
+      transition: all 0.5s;
+    }
+
+    .larg {
+      max-width: 960px;
+      margin: 30px auto;
+      padding: 0 30px;
+
+      & div {
+        background-color: #f7f7f7;
+        border: 1px solid #e2e2e2;
+        padding: 0 20px;
+        margin: 15px 0;
+
+        &:hover {
+          background-color: #fafafa;
+        }
+
+        h3 span {
+          font-family: "entypo";
+          font-size: 19px;
+          position: absolute;
+          right: 0;
+          transition: all 0.6s;
+
+          &.close {
+            -webkit-transform: rotate(180deg);
+            transition: all 0.5s;
+          }
+        }
+
+        & p {
+          display: none;
+          margin-left: 10px;
+          padding: 0 15px;
+          border-left: 1px solid #ccc;
+        }
+      }
+    }
+
+    .project {
+      width: 95%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 20px 10px;
+    }
+
+    .project * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .project .box {
+      width: 250px;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .project .box #main-img {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 5px;
+      padding: 0;
+    }
+
+    .project .box .images-small {
+      display: flex;
+      width: 100%;
+      gap: 5px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .project .box .images-small img {
+      display: flex;
+      width: calc(235px / 4);
+    }
+
+    .project .box .details {
+      margin: 0;
+      text-align: right;
+      padding-bottom: 10px;
+      border: 1px solid #c0c1c0;
+    }
+
+    .project .box .details h3 {
+      color: #454952;
+      font-size: 24px;
+    }
+
+    .project .box .details h4 {
+      color: #454952;
+      font-size: 20px;
+    }
+
+    .project .box .control {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      margin: 5px 0 0;
+    }
+
+    .project .box .control button {
+      border: none;
+      outline: none;
+      color: white;
+      font-size: 22px;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .project .box .control button.delete {
+      background-color: rgb(253, 85, 85);
+    }
+
+    .project .box .control button.delete:hover {
+      background-color: rgb(255, 53, 53);
+      box-shadow: 0 10px 20px rgb(253, 85, 85);
+    }
+
+    .project .box .control button.edit:hover {
+      background-color: rgb(101, 252, 46);
+      box-shadow: 0 10px 20px rgb(115, 250, 65);
+    }
+
+    .project .box .control button.edit {
+      background-color: rgb(115, 250, 65);
+    }
+
+    /* team-company-container */
+    .team-company-container {
+      display: none;
+    }
+
+    .team-company-container table {
+      width: 100%;
+      white-space: nowrap;
+      table-layout: fixed;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    .team-company-container table thead {
+      border-top: 1px solid #e2e9e1;
+      border-bottom: 1px solid #e2e9e1;
+    }
+
+    .team-company-container table thead td {
+      font-weight: 600;
+      font-size: 15px;
+      text-transform: uppercase;
+      padding: 18px 0;
+      color: var(--bkg);
+    }
+
+    .team-company-container table tbody td {
+      padding-top: 15px;
+      font-size: 20px;
+      padding-bottom: 10px;
+    }
+
+    .team-company-container table tbody tr:not(:last-child) {
+      border-bottom: 1px solid #e2e9e1;
+    }
+
+    .team-company-container table tbody td i {
+      color: var(--color);
+      font-size: 20px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .team-company-container table tbody td i:hover {
+      color: rgb(120, 252, 59);
+    }
+
+    .team-company-container table img {
+      width: 70px;
+    }
+
+    .team-company-container table button {
+      border: none;
+      outline: none;
+      color: white;
+      font-size: 22px;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .team-company-container table button:hover {
+      background-color: rgb(101, 252, 46);
+      box-shadow: 0 10px 20px rgb(115, 250, 65);
+    }
+
+    .team-company-container table button {
+      background-color: rgb(56 59 66);
+    }
+
+    .aad-project {
+      display: none;
+    }
+
+    .aad-project form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      border-radius: 6px;
+      padding: 20px;
+    }
+
+    .aad-project form h2 {
+      font-size: 30px !important;
+    }
+
+    .aad-project form input {
+      font-size: 20px !important;
+      width: 80%;
+      padding: 10px 20px;
+      border: none;
+      outline: none;
+      text-align: right;
+    }
+
+    .aad-project form input[type="submit"] {
+      padding: 10px 20px;
+      border: none;
+      outline: none;
+      text-align: center;
+      background-color: #33526b;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+      color: white;
+      font-size: 25px !important;
+      width: 80%;
+      cursor: pointer;
+    }
+
+    .aad-project form input[type="submit"]:hover {
+      background-color: rgb(64, 186, 7);
+    }
+    .home-icon {
+      margin-right: 45px;
+      color: #aaa;
+    }
+  </style>
+
+  <body>
+    <span class="bckg"></span>
+    <header>
+      <h1>لوحة تحكم</h1>
+      <nav>
+        <ul>
+          <li id="products">
+            <a href="javascript:void(0);" data-title="المشاريع">المشاريع</a>
+          </li>
+          <li id="addProject">
+            <a href="javascript:void(0);" data-title="اضافة مشروع"
+              >اضافة مشروع</a
+            >
+          </li>
+          <li id="team">
+            <a href="javascript:void(0);" data-title="الموظفين">الموظفين</a>
+          </li>
+          <li>
+            <a href="meeting.html"
+              ><i class="fa-solid fa-business-time"></i> غرفة الاجتماعات
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html"
+              ><i class="fa-solid fa-house home-icon"></i>الصفحة الرئيسية
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="title">
+        <h2>الاصول العقارية</h2>
+        <a href="javascript:void(0);">  username of admin</a>
+      </div>
+
+      <article class="larg">
+        <div>
+          <h3>
+            مشرعات تمليك فلل<span style="position: absolute; left: 0"
+              ><i class="fa-solid fa-angle-down"></i
+            ></span>
+          </h3>
+          <div class="project">
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3>
+            مشروعات تمليك اراضي
+            <span style="position: absolute; left: 0"
+              ><i class="fa-solid fa-angle-down"></i
+            ></span>
+          </h3>
+          <div class="project">
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3>
+            مشروعات تمليك محلات تجارية
+            <span style="position: absolute; left: 0"
+              ><i class="fa-solid fa-angle-down"></i
+            ></span>
+          </h3>
+          <div class="project">
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3>
+            مشروعات تمليك بنايات
+            <span style="position: absolute; left: 0"
+              ><i class="fa-solid fa-angle-down"></i
+            ></span>
+          </h3>
+          <div class="project">
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3>
+            مشروعات ايجار محلات تجارية
+            <span style="position: absolute; left: 0"
+              ><i class="fa-solid fa-angle-down"></i
+            ></span>
+          </h3>
+          <div class="project">
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3>
+            مشروعات ايجار فلل
+            <span style="position: absolute; left: 0"
+              ><i class="fa-solid fa-angle-down"></i
+            ></span>
+          </h3>
+          <div class="project">
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3>
+            مشروعات ايجار بنايات
+            <span style="position: absolute; left: 0"
+              ><i class="fa-solid fa-angle-down"></i
+            ></span>
+          </h3>
+          <div class="project">
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img id="main-img" src="images/image1.jpg" alt="" />
+              <div class="images-small">
+                <img src="images/image1.jpg" alt="" />
+                <img src="images/image2.jpg" alt="" />
+                <img src="images/image3.jpg" alt="" />
+                <img src="images/image4.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h3>فلل</h3>
+                <h4>:الوصف</h4>
+                <p class="description">فلل على البحر اربع غرف</p>
+                <div class="control">
+                  <button class="delete">حذف</button>
+                  <button class="edit">تعديل</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="aad-project">
+          <form action="">
+            <h2>اضافة مشروع</h2>
+            <hr />
+            <input
+              type="text"
+              placeholder="..اسم المشروع"
+              id="username"
+              required
+            />
+            <input type="email" placeholder=".. العنوان" id="email" required />
+            <input type="text" placeholder=".. الوصف" id="password" required />
+            <input type="submit" value="اضافة " id="add-to-team" />
+          </form>
+        </div>
+        <div class="team-company-container">
+          <table>
+            <thead>
+              <tr>
+                <td>اسم الموظف</td>
+                <td>الصورة</td>
+                <td>رقم الموظف</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dev compony</td>
+                <td><i class="fa-regular fa-user"></i></td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>احمد حسن</td>
+                <td><i class="fa-regular fa-user"></i></td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td><button>اضافة موظف</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </main>
+
+    <script src="js/jquery-3.6.1.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
